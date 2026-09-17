@@ -1,0 +1,241 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #120204; /* Fundo vinho escuro de luxo */
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.links-container {
+    width: 100%;
+    max-width: 414px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* PERFIL */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.profile-avatar {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background-color: #222;
+    overflow: hidden;
+    margin-bottom: 12px;
+    border: 2px solid #d437a5; /* Borda dourada sutil */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.profile-bio {
+    font-size: 0.85rem;
+    color: #aaaaaa;
+    margin-bottom: 18px;
+}
+
+.highlight-pill {
+    width: 100%;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* LISTA DE CARDS */
+.links-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* CARDS COM IMAGEM DE FUNDO */
+.link-card {
+    position: relative;
+    width: 100%;
+    height: 90px;
+    border-radius: 18px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* IMAGENS DE FUNDO DOS CARDS */
+.card-youtube {
+    background-image: url('assets/image.png');
+}
+
+.card-instagram {
+    background-image: url('assets/image.png');
+}
+
+.card-tiktok {
+    background-image: url('assets/image.png');
+}
+
+.card-contato {
+    background-image: url('assets/image.png');
+}
+.card-blog{
+    background-image: url('assets/image.png');
+}
+
+/* MÁSCARA ESCURA (DEIXA A FOTO DE FUNDO VISÍVEL E O TEXTO LENDO FÁCIL) */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+    transition: background 0.25s ease;
+}
+
+.link-card:hover {
+    transform: translateY(-4px);
+    border-color: #e01090; /* Realce dourado ao passar o mouse */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+}
+
+.link-card:hover .card-overlay {
+    background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 100%);
+}
+
+/* CONTEÚDO DENTRO DO CARD */
+.card-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+}
+
+.card-icon {
+    font-size: 1.8rem;
+    color: #ffffff;
+    position: absolute;
+    left: 24px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+}
+
+.card-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+}
+
+/* DIVISOR E RODAPÉ */
+.divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 30px 0 25px 0;
+}
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.social-box {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(247, 246, 246, 0.9);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #120204;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.social-box:hover {
+    transform: scale(1.08);
+    background-color: #e01090; /* Transição dourada ao focar */
+    color: #ffffff;
+}
+
+.privacy-link {
+    color: #888888;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.privacy-link:hover {
+    color: #ffffff;
+}
+.copyright-text {
+    color: #888888;
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+}
+
+
+
+/* Estilo do Card do Blog */
+.card-blog {
+    border: 1px solid rgba(229, 184, 143, 0.3);
+}
+
+.card-blog:hover {
+    border-color: #e5b88f;
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}

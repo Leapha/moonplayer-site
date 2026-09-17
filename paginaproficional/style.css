@@ -1,0 +1,234 @@
+    /* Estilos Gerais */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-color: #000000;
+        /* Fundo Preto */
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 420px;
+        /* Layout estilo mobile link-in-bio */
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    /* Seção Perfil Header */
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #333;
+    }
+
+    .profile-name {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .profile-phrase {
+        font-size: 0.9rem;
+        color: #aaaaaa;
+    }
+
+    .divider-bar {
+        width: 100%;
+        height: 15px;
+        background-color: #333333;
+        border-radius: 20px;
+    }
+
+    /* Botões Principais */
+    /* Botões Principais com Imagem de Fundo */
+    .btn-link {
+        width: 100%;
+        min-height: 60px;
+        padding: 46px 20px;
+        color: #ffffff;
+        /* Texto branco */
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1rem;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        /* Configuração da imagem de fundo */
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        overflow: hidden;
+
+        /* Borda sutil para dar acabamento */
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    /* Camada escura por cima da imagem para deixar o texto 100% legível */
+    .btn-link::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.55);
+        /* Escurece 55% a foto de fundo */
+        z-index: 1;
+    }
+
+    /* Garante que o texto fique acima da camada escura */
+    .btn-link span {
+        position: relative;
+        z-index: 2;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Efeito ao passar o mouse */
+    .btn-link:hover {
+        transform: scale(1.02);
+        filter: brightness(1.1);
+    }
+
+    .section-divider {
+        width: 100%;
+        border: 0;
+        border-top: 1px solid #333333;
+        margin: 10px 0;
+    }
+
+    /* Seções de Conteúdo (Jiu-Jitsu / Judô) */
+    .content-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: normal;
+    }
+
+    .grid-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .text-box {
+        flex: 1;
+        font-size: 0.85rem;
+        line-height: 1.4;
+        color: #dddddd;
+    }
+
+    /* Carrossel de Fotos */
+    .carousel-container {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .carousel-box {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        background-color: #222222;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .carousel-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: none;
+    }
+
+    .carousel-box img.active {
+        display: block;
+    }
+
+    .carousel-dots {
+        display: flex;
+        gap: 6px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #555555;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #ffffff;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .icon-box {
+        width: 48px;
+        height: 48px;
+        background-color: #222222;
+        /* Fundo escuro elegante */
+        border: 1px solid #333333;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        /* Cor dos ícones */
+        font-size: 1.4rem;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    /* Efeito ao passar o mouse */
+    .icon-box:hover {
+        background-color: #ffffff;
+        color: #000000;
+        transform: translateY(-3px);
+    }
+
+    footer {
+        font-size: 0.75rem;
+        color: #777777;
+        text-align: center;
+        margin-top: 10px;
+    }

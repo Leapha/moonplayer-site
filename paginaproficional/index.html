@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pagina proficional</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca de ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header / Perfil -->
+        <div class="profile">
+            <!-- Substitua a URL abaixo pela sua foto -->
+            <img src="assets/image.png" alt="Foto de Perfil" class="profile-img">
+            <h1 class="profile-name">seu nome</h1>
+            <p class="profile-phrase">uma breve descrição ✨</p>
+        </div>
+
+        <!-- Barra cinza superior -->
+        <div class="divider-bar"></div>
+
+        <!-- Botões principais -->
+        <!-- Botão 1: Meu Instagram -->
+        <a href="https://www.instagram.com/moonplayer_studio?stkn=a29wYXo0MGtuN3My" target="_blank" class="btn-link"
+            style="background-image: url('assets/image.png');">
+            <span>Meu Instagram</span>
+        </a>
+
+        <!-- Botão 2: Marque sua aula Experimental -->
+        <a href="https://wa.me/558182649586?text=Desejo%20fazer%20um%20orçamento" target="_blank"
+            class="btn-link" style="background-image: url('assets/image.png');">
+            <span>Marque sua consultoria!</span>
+        </a>
+        <hr class="section-divider">
+
+        <!-- Seção Jiu-Jitsu Caverna -->
+        <div class="content-section">
+            <h2 class="section-title">seu trabalho</h2>
+            <div class="grid-row">
+                <div class="text-box">
+                    um breve paragrafo sobre seu trabalho, sua marca ou seu projeto. Destaque os pontos fortes, a missão e a visão do seu trabalho, e como você pode ajudar seus clientes ou seguidores a alcançar seus objetivos.
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-box" id="carousel-jiujitsu">
+                        <!-- Substitua as URLs das imagens pelas suas -->
+                        <img src="assets/image.png" class="active" alt="Jiu Jitsu 1">
+                        <img src="assets/image.png" alt="Jiu Jitsu 2">
+                        <img src="assets/image.png" alt="Jiu Jitsu 3">
+                        <img src="assets/image.png" alt="Jiu Jitsu 4">
+                    </div>
+                    <div class="carousel-dots" id="dots-jiujitsu">
+                        <span class="dot active" onclick="setSlide('carousel-jiujitsu', 'dots-jiujitsu', 0)"></span>
+                        <span class="dot" onclick="setSlide('carousel-jiujitsu', 'dots-jiujitsu', 1)"></span>
+                        <span class="dot" onclick="setSlide('carousel-jiujitsu', 'dots-jiujitsu', 2)"></span>
+                        <span class="dot" onclick="setSlide('carousel-jiujitsu', 'dots-jiujitsu', 3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção Judô Caverna -->
+        <div class="content-section">
+            <h2 class="section-title">seu trabalho</h2>
+            <div class="grid-row">
+                <div class="carousel-container">
+                    <div class="carousel-box" id="carousel-judo">
+                        <!-- Substitua as URLs das imagens pelas suas -->
+                        <img src="assets/image.png" class="active" alt="Judo 1">
+                        <img src="assets/image.png" alt="Judo 2">
+                        <img src="assets/image.png" alt="Judo 3">
+                        <img src="assets/image.png" alt="Judo 4">
+                    </div>
+                    <div class="carousel-dots" id="dots-judo">
+                        <span class="dot active" onclick="setSlide('carousel-judo', 'dots-judo', 0)"></span>
+                        <span class="dot" onclick="setSlide('carousel-judo', 'dots-judo', 1)"></span>
+                        <span class="dot" onclick="setSlide('carousel-judo', 'dots-judo', 2)"></span>
+                        <span class="dot" onclick="setSlide('carousel-judo', 'dots-judo', 3)"></span>
+                    </div>
+                </div>
+                <div class="text-box">
+                    um breve paragrafo sobre seu trabalho, sua marca ou seu projeto. Destaque os pontos fortes, a missão e a visão do seu trabalho, e como você pode ajudar seus clientes ou seguidores a alcançar seus objetivos.
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Seção Treinamento Funcional Caverna -->
+        <div class="content-section">
+            <h2 class="section-title">Treinamento Funcional Caverna</h2>
+            <div class="grid-row">
+                <div class="text-box">
+                    um breve paragrafo sobre seu trabalho, sua marca ou seu projeto. Destaque os pontos fortes, a missão e a visão do seu trabalho, e como você pode ajudar seus clientes ou seguidores a alcançar seus objetivos.
+                </div>
+                <div class="carousel-container">
+                    <div class="carousel-box" id="carousel-funcional">
+                        <!-- Substitua as URLs das imagens pelas suas -->
+                        <img src="assets/image.png" class="active" alt="Treinamento Funcional 1">
+                        <img src="assets/image.png" alt="Treinamento Funcional 2">
+                        <img src="assets/image.png" alt="Treinamento Funcional 3">
+                        <img src="assets/image.png" alt="Treinamento Funcional 4">
+                    </div>
+                    <div class="carousel-dots" id="dots-funcional">
+                        <span class="dot active" onclick="setSlide('carousel-funcional', 'dots-funcional', 0)"></span>
+                        <span class="dot" onclick="setSlide('carousel-funcional', 'dots-funcional', 1)"></span>
+                        <span class="dot" onclick="setSlide('carousel-funcional', 'dots-funcional', 2)"></span>
+                        <span class="dot" onclick="setSlide('carousel-funcional', 'dots-funcional', 3)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="section-divider">
+
+        <!-- Ícones e Rodapé -->
+        <!-- Ícones e Rodapé -->
+        <div class="social-icons">
+            <!-- Ícone Instagram -->
+            <a href="https://www.instagram.com/moonplayer_studio?stkn=a29wYXo0MGtuN3My" target="_blank" class="icon-box"
+                aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <!-- Ícone WhatsApp -->
+            <a href="https://wa.me/558183771811?text=Desejo%20fazer%20meu%20orçamento" target="_blank"
+                class="icon-box" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+        </div>
+
+        <footer>
+            © 2026 sua marca. Todos os direitos reservados.
+        </footer>
+
+    </div>
+
+    <!-- Script para controle do mini carrossel -->
+    <!-- Script para controle e automação dos carrosséis -->
+    <script>
+        // Função para mudar o slide manualmente ao clicar nos pontos
+        function setSlide(carouselId, dotsId, index) {
+            const carousel = document.getElementById(carouselId);
+            const dots = document.getElementById(dotsId);
+
+            if (!carousel || !dots) return;
+
+            const images = carousel.querySelectorAll('img');
+            const dotList = dots.querySelectorAll('.dot');
+
+            images.forEach(img => img.classList.remove('active'));
+            dotList.forEach(dot => dot.classList.remove('active'));
+
+            if (images[index]) images[index].classList.add('active');
+            if (dotList[index]) dotList[index].classList.add('active');
+        }
+
+        // Função para avançar para a próxima foto do carrossel
+        function nextSlide(carouselId, dotsId) {
+            const carousel = document.getElementById(carouselId);
+            if (!carousel) return;
+
+            const images = carousel.querySelectorAll('img');
+            let currentIndex = 0;
+
+            // Descobre qual imagem está ativa no momento
+            images.forEach((img, index) => {
+                if (img.classList.contains('active')) {
+                    currentIndex = index;
+                }
+            });
+
+            // Calcula o próximo índice (retorna para o 0 ao chegar ao fim)
+            const nextIndex = (currentIndex + 1) % images.length;
+            setSlide(carouselId, dotsId, nextIndex);
+        }
+
+        // Inicia a transição automática para todos os carrosséis da página
+        function startAutoCarousels() {
+            const tempoTroca = 3000; // Tempo em milissegundos (3000ms = 3 segundos)
+
+            // Lista de carrosséis para rodar sozinho
+            const carousels = [
+                { id: 'carousel-jiujitsu', dots: 'dots-jiujitsu' },
+                { id: 'carousel-judo', dots: 'dots-judo' },
+                { id: 'carousel-funcional', dots: 'dots-funcional' }
+            ];
+
+            carousels.forEach(item => {
+                setInterval(() => {
+                    nextSlide(item.id, item.dots);
+                }, tempoTroca);
+            });
+        }
+
+        // Executa a automação quando a página carregar
+        document.addEventListener('DOMContentLoaded', startAutoCarousels);
+    </script>
+</body>
+
+</html>

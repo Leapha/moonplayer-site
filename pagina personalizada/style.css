@@ -1,0 +1,257 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ocupa 100% da altura e largura da tela do dispositivo */
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #391d7e; /* Cor de fundo principal em tela cheia */
+    color: #ffffff;
+}
+
+/* Envolvente principal que garante o preenchimento total */
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 10px;
+}
+
+/* Container de conteúdo */
+.container {
+    width: 100%;
+    max-width: 480px; /* Largura ideal para manter o formato de app no PC */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Perfil */
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #d9d9d9;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.profile-bio {
+    font-size: 0.9rem;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.divider-pill {
+    width: 85%;
+    height: 24px;
+    background-color: #1b2e46;
+    border-radius: 12px;
+}
+
+/* Links Principais */
+.main-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* 1. Altere algumas coisas na sua classe .btn-link original: */
+.btn-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    
+    /* Configurações para a imagem de fundo se ajustar perfeitamente */
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    color: #ffffff; /* 👈 Mudamos para texto branco para dar contraste com imagens */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9); /* 👈 Sombra no texto para ele não sumir na imagem */
+    
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border-radius: 18px;
+    transition: transform 0.2s, filter 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bordinha opcional para ficar elegante */
+}
+
+.btn-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.2); /* Deixa a imagem um pouco mais clara ao passar o mouse */
+}
+
+/* 2. Adicione estas NOVAS CLASSES no final do seu CSS: */
+
+.bg-insta {
+    /* O linear-gradient escurece a imagem em 40% para o texto branco aparecer bem */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/image.png');
+}
+
+.bg-tiktok {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/image.png');
+}
+
+.bg-whats {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/image.png');
+}
+
+/* Divisores */
+.section-divider {
+    width: 100%;
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 15px 0 25px 0;
+}
+
+/* Seção de Produtos */
+.products-section {
+    width: 100%;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 90px;
+}
+
+/* Grade dos Produtos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    gap: 50px 55px;            /* 👈 O 1.º value (10px) controla a distância VERTICAL e o 2.º (15px) a HORIZONTAL */
+    
+    max-width: 380px;          /* 👈 Aproxima as duas colunas puxando os itens para o centro */
+    margin: 0 auto;            /* Centraliza a grade na tela */
+    justify-items: center;
+    margin-bottom: 30px;        /* Espaço entre a grade e o rodapé */
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Efeito alternado ziguezague */
+.product-card:nth-child(even) {
+    margin-top: -30px;
+}
+
+.product-image {
+    width: 95px;
+    height: 95px;
+    background-color: #d9d9d9;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-label {
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* Rodapé */
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.icon-box {
+    width: 40px;
+    height: 40px;
+    background-color: #d9d9d9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #240707;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+.footer p {
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+
+/* Responsividade para Telas Grandes (Notebooks/Monitores) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 600px; /* Aumenta um pouco a largura para telas maiores sem perder o estilo */
+    }
+    
+    .products-grid {
+        gap: 30px;
+    }
+
+    .product-image {
+        width: 110px;
+        height: 110px;
+    }
+}
